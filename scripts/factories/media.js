@@ -8,6 +8,7 @@ class PhotographerMedia {
         this.liked = false; // ajout de la variable de suivi
     }
 
+    // Fonction permettant de créer un média
     createMedia() {
         const card = document.createElement('article');
         card.insertAdjacentHTML("beforeend",
@@ -65,19 +66,19 @@ class ImageMedia extends PhotographerMedia {
         this.image = "assets/content/" + data.image;
     }
 
-    createMedia() {
-        const card = super.createMedia();
+    createMedia() { // Création d'une carte pour un média de type image
+        const card = super.createMedia(); // Appel de la fonction createMedia() de la classe mère
         card.insertAdjacentHTML("afterbegin",
             `
         <img src="${this.image}" class="mediaPicture" alt="${this.title}" tabindex="0"/>
         `)
 
-        let imageModal = card.querySelectorAll('.mediaPicture')
-        imageModal.forEach(element => {
+        let imageModal = card.querySelectorAll('.mediaPicture') // Récupération de toutes les images
+        imageModal.forEach(element => { // Pour chaque image
             element.addEventListener('click', () => openMediasModal(this.id)) // Ajout d'un évènement au clique d'une image permettant l'ouverture de la modale carroussel.
             element.addEventListener('keydown', (e) => { // Ajout d'un évènement à l'appuie du la touche "entrée" d'une image permettant l'ouverture de la modale carroussel.
                 if (e.key === 'Enter') {
-                    openMediasModal(this.id)
+                    openMediasModal(this.id) // Appel de la fonction permettant l'ouverture de la modale carroussel.
                 }
             })
         })
@@ -85,11 +86,11 @@ class ImageMedia extends PhotographerMedia {
         return (card)
     }
 
-    createMediaModal() {
-        const article = document.createElement('div')
-        article.setAttribute('id', 'mediaModal_' + this.id)
-        article.setAttribute('class', 'mediaModal')
-        article.insertAdjacentHTML(
+    createMediaModal() { // Création d'une modale pour un média de type image
+        const article = document.createElement('div') // Création d'un élément HTML de type div
+        article.setAttribute('id', 'mediaModal_' + this.id) // Ajout d'un attribut id à l'élément HTML
+        article.setAttribute('class', 'mediaModal') // Ajout d'un attribut class à l'élément HTML
+        article.insertAdjacentHTML( // Ajout du contenu HTML à l'élément HTML
             "beforeend",
             `
                 <img src="${this.image}" class="mediaPicture" alt="${this.title}" tabindex="0"/>
@@ -110,9 +111,9 @@ class VideoMedia extends PhotographerMedia {
         this.video = "assets/content/" + data.video;
     }
 
-    createMedia() {
-        const card = super.createMedia()
-        card.insertAdjacentHTML(
+    createMedia() { // Création d'une carte pour un média de type vidéo
+        const card = super.createMedia() // Appel de la fonction createMedia() de la classe mère
+        card.insertAdjacentHTML( // Ajout du contenu HTML à l'élément HTML
             "afterbegin",
             `
             <video  alt="${this.title}" class="mediaVideo" tabindex="0">
@@ -121,14 +122,23 @@ class VideoMedia extends PhotographerMedia {
             `
         )
 
+        // Ajout des événements pour la modale carrousel
+        const videoModal = card.querySelector('.mediaVideo') // Récupération de la vidéo
+        videoModal.addEventListener('click', () => openMediasModal(this.id)) // Ajout d'un évènement au clique d'une vidéo permettant l'ouverture de la modale carroussel.
+        videoModal.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                openMediasModal(this.id) // Appel de la fonction permettant l'ouverture de la modale carroussel.
+            }
+        })
+
         return (card)
     }
 
     createMediaModal() {
-        const article = document.createElement('div')
-        article.setAttribute('id', 'mediaModal_' + this.id)
-        article.setAttribute('class', 'mediaModal')
-        article.insertAdjacentHTML(
+        const article = document.createElement('div') // Création d'un élément HTML de type div
+        article.setAttribute('id', 'mediaModal_' + this.id) // Ajout d'un attribut id à l'élément HTML
+        article.setAttribute('class', 'mediaModal') // Ajout d'un attribut class à l'élément HTML
+        article.insertAdjacentHTML( // Ajout du contenu HTML à l'élément HTML
             "beforeend",
             `
             <video width="350" height="300" class="video" alt="${this.title}" tabindex="0" controls auto>
@@ -138,7 +148,7 @@ class VideoMedia extends PhotographerMedia {
             `
         )
 
-        console.log('Creating media modal with id:', 'mediaModal_' + this.id);
+        console.log('Creating media modal with id:', 'mediaModal_' + this.id); // Affichage dans la console du contenu de la modale
         console.log('Video source:', this.video);
         console.log('Video title:', this.title);
 

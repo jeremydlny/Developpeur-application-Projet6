@@ -29,16 +29,16 @@ function initmodal(medias) {
     let carousel = document.getElementById("carousel");
 
     // Création des médias dans la modale du carroussel en utilisant les deux classes de médias disponibles.
-    for (let i = 0; i < medias.length; i++) {
-        if (medias[i].image) {
-            let imageMedia = new ImageMedia(medias[i])
-            let article = imageMedia.createMediaModal();
-            carousel.appendChild(article);
+    for (let i = 0; i < medias.length; i++) { // Boucle permettant de créer les médias dans la modale carroussel.
+        if (medias[i].image) { // Si le média est une image, on utilise la classe ImageMedia.
+            let imageMedia = new ImageMedia(medias[i]) // Création d'un nouvel objet imageMedia.
+            let article = imageMedia.createMediaModal(); // Création du HTML de l'image.
+            carousel.appendChild(article); // Ajout de l'image dans le carroussel.
 
-        } else {
-            let videoMedia = new VideoMedia(medias[i])
-            let article = videoMedia.createMediaModal();
-            carousel.appendChild(article);
+        } else { // Si le média est une vidéo, on utilise la classe VideoMedia.
+            let videoMedia = new VideoMedia(medias[i]) // Création d'un nouvel objet videoMedia.
+            let article = videoMedia.createMediaModal(); // Création du HTML de la vidéo.
+            carousel.appendChild(article); // Ajout de la vidéo dans le carroussel.
         }
     }
     // Ajout d'un évènement au clique sur le bouton close, permettant d'ajouter du style à la modal pour ne plus l'afficher.
