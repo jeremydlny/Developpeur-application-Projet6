@@ -1,0 +1,461 @@
+#contact_modal {
+    display: none;
+}
+
+.photograph-header {
+    background-color: #FAFAFA;
+    height: 300px;
+    margin: 0 100px;
+}
+
+.photographer_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.photographer_header__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35%;
+    padding-left: 5%;
+}
+
+.photographer_header__profile__name {
+    font-size: 64px;
+    font-weight: normal;
+    color: #901C1C;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.photographer_header__profile__location {
+    color: #901C1C;
+    font-size: 13px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.photographer_header__profile__tagline {
+    font-size: 20px;
+    font-weight: normal;
+    color: #901C1C;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.photographer_header__profile__contact {
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 69px;
+    background-color: #901C1C;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.photographer_header__profile__contact .button {
+    text-decoration: none;
+    padding: 11% 8% 11% 8%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.photographer_header__profile__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 376px;
+    height: 50px;
+    background-color: #DB8876;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 50px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+}
+
+.photographer_header__profile__price .price {
+    padding-right: 1%;
+    padding-left: 48%;
+    display: flex;
+    flex-direction: row;
+}
+
+.photographer_header__profile__price .likes {
+    padding-right: 1%;
+    padding-left: 1%;
+    display: flex;
+    flex-direction: row;
+}
+
+.photographer_header img {
+    height: 200px;
+    width: 200px;
+    clip-path: ellipse(50% 50%);
+    margin-right: 40px;
+}
+
+#like-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.modal {
+    border-radius: 5px;
+    background-color: #DB8876;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+    margin: auto;
+}
+
+.modal header {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal header img {
+    cursor: pointer;
+}
+
+.modal header h2 {
+    font-size: 64px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.label {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ListFiltre {
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+#menu ul li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    color: #312E2E;
+    font-size: 36px;
+}
+
+
+.label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.select__element {
+    font-family: "DM Sans", sans-serif;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#select__element-icon {
+    background-color: black;
+    width: 2%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /*TEMPORARIRE*/
+    display: none;
+}
+
+#menu {
+    display: none;
+}
+
+#filter_section {
+    margin-top: 16px;
+}
+
+#filter:focus+#menu {
+    display: block;
+}
+
+#filter {
+    background-color: #901C1C;
+    font-size: 18px;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu__options {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#menu_cache {
+    left: 176px;
+    width: 10%;
+    list-style: none;
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: #901C1C;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+}
+
+#menu_cache [aria-selected="true"] {
+    background-color: white;
+    color: #901C1C;
+}
+
+/* #contact-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+} */
+
+.contact_modal__form__photograhper h2 {
+    margin-top: 0px;
+    width: 449px;
+    height: 83px;
+    font-size: 64px;
+    font-weight: 400;
+}
+
+.contact_modal__form__photograhper .name {
+    width: 100%;
+    height: 83px;
+    font-size: 64px;
+    font-weight: 400;
+}
+
+
+#modal-container {
+    position: fixed;
+    top: 3%;
+    left: 25%;
+    display: block;
+    width: 669px;
+    height: 850px;
+    border-radius: 5px;
+    z-index: 1;
+    background-color: #DB8876;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 35px 35px 35px;
+    margin: auto;
+}
+
+.contact_modal__form__group {
+    margin-bottom: 0px;
+}
+
+.contact_modal__form__group #message {
+    width: 100%;
+    height: 170px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact_modal__form__group button {
+    background-color: #911C1C;
+    width: 170px;
+    color: white;
+    height: 69px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: DM Sans;
+    margin-top: 24px;
+}
+
+#close-button {
+    position: fixed;
+    top: 7%;
+    left: 73%;
+    background-color: #DB8876;
+    border-color: #DB8876;
+    border-style: dashed;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: self-start;
+    margin-bottom: 26px;
+}
+
+form input {
+    width: 100%;
+    height: 68px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* 6- Style apporté à la modale du carroussel. */
+.modal_childrens {
+    width: 50%;
+    height: 75%;
+    position: relative;
+    top: 10%;
+    margin: auto;
+
+}
+
+#medias_modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(187, 187, 187, 0.47);
+
+}
+
+.modal-content,
+#carousel {
+    width: 100%;
+    height: 100%;
+    margin: 0px 20px;
+}
+
+#carousel img,
+#carousel video {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+/* 7- Style apporté à la modale du carroussel et aux boutons previous, next et close. */
+.mediaModal {
+    height: 100%;
+    display: none;
+}
+
+.mediaModal.active {
+    display: block;
+}
+
+.mediaModal p {
+    margin: 0;
+    color: #901C1C;
+}
+
+.modal-content {
+    display: flex;
+    background-color: white;
+    padding: 25px 40px 40px 40px;
+}
+
+.previous-button {
+    background: url('/assets/icons/prev.png') center no-repeat;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    background-size: 20px;
+
+}
+
+#left-side {
+    display: flex;
+    height: 50%;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#right-side {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-button {
+    background: url('/assets/icons/closemodal.png') center no-repeat;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    background-size: 20px;
+
+}
+
+.next-button {
+    background: url('/assets/icons/next.png') center no-repeat;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    background-size: 20px;
+
+}
+
+.next-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/*-----------------------------------------------------------*/
