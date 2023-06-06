@@ -70,6 +70,36 @@ function initmodal(medias) {
         }
     });
 
+    document.addEventListener("keydown", function (event) { // Ajout d'un évènement au clavier, permettant de naviguer dans le carroussel avec les flèches gauche et droite, et de fermer la modale avec la touche echap.
+        let activeMedia = modal.querySelector('.mediaModal.active') // On récupère le média qui comporte la classe 'active'.
+
+        switch (event.key) { // On utilise un switch pour définir les actions à effectuer en fonction de la touche pressée.
+            case "ArrowLeft": // Si la touche pressée est la flèche gauche, on retire au média affiché la classe 'active', et on attribue au média précédent la classe 'active'.
+                activeMedia.classList.remove('active') // On retire au média affiché la classe 'active'.
+
+                if (activeMedia.previousElementSibling) { // Si le média précédent existe, on lui attribue la classe 'active'.
+                    activeMedia.previousElementSibling.classList.add('active') // On attribue au média précédent la classe 'active'.
+                } else {
+                    modal.querySelector('.mediaModal:last-child').classList.add('active') // Sinon, on attribue au dernier média la classe 'active'.
+                }
+                break; // On sort du switch.
+
+            case "ArrowRight": // Si la touche pressée est la flèche droite, on retire au média affiché la classe 'active', et on attribue au média suivant la classe 'active'.
+                activeMedia.classList.remove('active') // On retire au média affiché la classe 'active'.
+
+                if (activeMedia.nextElementSibling) { // Si le média suivant existe, on lui attribue la classe 'active'.
+                    activeMedia.nextElementSibling.classList.add('active') // On attribue au média suivant la classe 'active'.
+                } else {
+                    modal.querySelector('.mediaModal:first-child').classList.add('active') // Sinon, on attribue au premier média la classe 'active'.
+                }
+                break; // On sort du switch.
+
+            case "Escape": // Si la touche pressée est la touche echap, on retire au média affiché la classe 'active', et on ferme la modale.
+                modal.style.display = "none"; // On ferme la modale.
+                break; // On sort du switch.
+        }
+    });
+
     return modal;
 }
 

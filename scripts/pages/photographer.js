@@ -113,14 +113,14 @@ function displaydata(photographer, photographerMedia) {
                         return 1 // Sinon, on retourne -1.
                     }
                     break; // On sort du switch.
-                case 'Date':
+                case 'Date':  // Si l'élément cliqué est Date, on trie le tableau photographerMedia en fonction de la date.
                     if (a.date > b.date) {
                         return 1
                     } else {
                         return -1
                     }
                     break;
-                case 'Titre':
+                case 'Titre': // Si l'élément cliqué est Titre, on trie le tableau photographerMedia en fonction du titre.
                     if (a.title > b.title) {
                         return 1
                     } else {

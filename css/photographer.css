@@ -1,461 +1,439 @@
-#contact_modal {
-    display: none;
+:root {
+    --background-color: #FAFAFA;
+    --background-color-modal: rgba(187, 187, 187, 0.47);
+    --dark-color: #000000;
+    --grey-color: #757575;
+    --light-red: #DB8876;
+    --main-color: #901C1C;
+    --secondary-color: #D3573C;
+    --white-color: #fff
 }
 
 .photograph-header {
-    background-color: #FAFAFA;
+    background-color: var(--background-color);
     height: 300px;
-    margin: 0 100px;
+    margin: 0 100px
 }
 
 .photographer_header {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
     height: 100%;
+    justify-content: space-between;
+    width: 100%
 }
 
 .photographer_header__profile {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 35%;
     padding-left: 5%;
+    width: 35%
 }
 
 .photographer_header__profile__name {
+    color: var(--main-color);
     font-size: 64px;
     font-weight: normal;
-    color: #901C1C;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    margin-top: 0
 }
 
 .photographer_header__profile__location {
-    color: #901C1C;
-    font-size: 13px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-weight: bold;
+    color: var(--main-color);
     display: flex;
     flex-direction: column;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0
 }
 
 .photographer_header__profile__tagline {
-    font-size: 20px;
-    font-weight: normal;
-    color: #901C1C;
-    margin-top: 15px;
-    margin-bottom: 0px;
+    color: var(--main-color);
     display: flex;
     flex-direction: column;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 15px
 }
 
 .photographer_header__profile__contact {
-    justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 69px;
-    background-color: #901C1C;
-    color: white;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    color: var(--white-color);
     font-size: 20px;
     font-weight: bold;
-    border-radius: 5px;
+    height: 69px;
+    justify-content: center;
+    width: 170px
 }
 
 .photographer_header__profile__contact .button {
-    text-decoration: none;
-    padding: 11% 8% 11% 8%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    color: white;
+    border-radius: 5px;
+    color: var(--white-color);
+    display: flex;
     font-size: 20px;
     font-weight: bold;
-    border-radius: 5px;
+    justify-content: center;
+    padding: 11% 8%;
+    text-align: center;
+    text-decoration: none
 }
 
 .photographer_header__profile__price {
+    align-items: center;
+    background-color: var(--light-red);
+    border-radius: 5px;
+    bottom: 0;
+    color: var(--dark-color);
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 376px;
-    height: 50px;
-    background-color: #DB8876;
-    color: rgb(0, 0, 0);
     font-size: 20px;
     font-weight: bold;
-    border-radius: 5px;
+    height: 50px;
+    justify-content: center;
     margin-right: 50px;
     position: fixed;
-    bottom: 0;
     right: 0;
-    align-items: center;
+    width: 376px
 }
 
 .photographer_header__profile__price .price {
-    padding-right: 1%;
-    padding-left: 48%;
     display: flex;
     flex-direction: row;
+    padding-left: 48%;
+    padding-right: 1%
 }
 
 .photographer_header__profile__price .likes {
-    padding-right: 1%;
-    padding-left: 1%;
     display: flex;
     flex-direction: row;
+    padding-left: 1%;
+    padding-right: 1%
 }
 
 .photographer_header img {
-    height: 200px;
-    width: 200px;
     clip-path: ellipse(50% 50%);
+    height: 200px;
     margin-right: 40px;
+    object-fit: cover;
+    width: 200px
 }
 
 #like-icon {
-    width: 20px;
     height: 20px;
     margin-right: 5px;
     margin-top: 4px;
+    width: 20px
 }
 
 .modal {
+    align-items: center;
+    background-color: var(--light-red);
     border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    padding: 35px;
     margin: auto;
+    padding: 35px;
+    width: 50%
 }
 
 .modal header {
     justify-content: space-between;
-    width: 100%;
+    width: 100%
 }
 
 .modal header img {
-    cursor: pointer;
+    cursor: pointer
 }
 
 .modal header h2 {
     font-size: 64px;
     font-weight: normal;
-    text-align: center;
+    text-align: center
 }
 
 .label {
     color: #000000;
+    display: inline-block;
     font-size: 18px;
     font-weight: 600;
+    margin-right: 10px
 }
 
 .ListFiltre {
     margin-left: 5%;
-    margin-top: 2%;
+    margin-top: 2%
 }
 
 #menu ul li {
     list-style: none;
-    margin-right: 20px;
+    margin-right: 20px
 }
 
 form {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
     align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    width: 100%
 }
 
 form label {
     color: #312E2E;
-    font-size: 36px;
-}
-
-
-.label {
-    display: inline-block;
-    margin-right: 10px;
+    font-size: 36px
 }
 
 .container {
+    align-items: center;
     display: flex;
     float: left;
-    align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-end
 }
 
 .select__element {
-    font-family: "DM Sans", sans-serif;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    font-family: "DM Sans", sans-serif
 }
 
 #select__element-icon {
-    background-color: black;
-    width: 2%;
+    background-color: var(--dark-color);
     display: inline-flex;
+    display: none;
     flex-direction: row;
     flex-wrap: nowrap;
-    /*TEMPORARIRE*/
-    display: none;
-}
-
-#menu {
-    display: none;
+    width: 2%
 }
 
 #filter_section {
-    margin-top: 16px;
-}
-
-#filter:focus+#menu {
-    display: block;
+    margin-top: 16px
 }
 
 #filter {
-    background-color: #901C1C;
-    font-size: 18px;
-    color: white;
+    background-color: var(--main-color);
     border: none;
-    padding: 10px;
     border-radius: 5px;
+    color: var(--white-color);
     cursor: pointer;
+    font-size: 18px;
+    padding: 10px
 }
 
 .menu__options {
-    padding: 10px;
     cursor: pointer;
+    padding: 10px
 }
 
 #menu_cache {
-    left: 176px;
-    width: 10%;
-    list-style: none;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    color: var(--white-color);
     font-size: 18px;
-    color: white;
+    left: 176px;
+    list-style: none;
     margin: 0;
     padding: 0;
-    background-color: #901C1C;
-    border-radius: 5px;
     position: absolute;
-    z-index: 1;
+    width: 10%;
+    z-index: 1
 }
 
 #menu_cache [aria-selected="true"] {
-    background-color: white;
-    color: #901C1C;
+    background-color: var(--white-color);
+    color: var(--main-color)
 }
 
-/* #contact-modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-} */
-
 .contact_modal__form__photograhper h2 {
-    margin-top: 0px;
-    width: 449px;
-    height: 83px;
     font-size: 64px;
     font-weight: 400;
+    height: 83px;
+    margin-top: 0;
+    width: 449px
 }
 
 .contact_modal__form__photograhper .name {
-    width: 100%;
-    height: 83px;
     font-size: 64px;
     font-weight: 400;
+    height: 83px;
+    width: 100%
 }
 
-
 #modal-container {
-    position: fixed;
-    top: 3%;
-    left: 25%;
-    display: block;
-    width: 669px;
-    height: 850px;
+    align-items: center;
+    background-color: var(--light-red);
     border-radius: 5px;
-    z-index: 1;
-    background-color: #DB8876;
-    width: 50%;
+    display: block;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: 850px;
     justify-content: space-between;
-    padding: 15px 35px 35px 35px;
+    left: 25%;
     margin: auto;
+    padding: 15px 35px 35px;
+    position: fixed;
+    top: 3%;
+    width: 669px;
+    width: 50%;
+    z-index: 1
 }
 
 .contact_modal__form__group {
-    margin-bottom: 0px;
+    margin-bottom: 0
 }
 
 .contact_modal__form__group #message {
-    width: 100%;
-    height: 170px;
     border: none;
     border-radius: 5px;
+    height: 170px;
+    width: 100%
 }
 
 .contact_modal__form__group button {
-    background-color: #911C1C;
-    width: 170px;
-    color: white;
-    height: 69px;
-    border-radius: 5px;
+    background-color: var(--main-color);
     border: none;
-    font-size: 18px;
-    font-weight: 600;
+    border-radius: 5px;
+    color: var(--white-color);
     cursor: pointer;
     font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 600;
+    height: 69px;
     margin-top: 24px;
+    width: 170px
 }
 
 #close-button {
-    position: fixed;
-    top: 7%;
-    left: 73%;
-    background-color: #DB8876;
-    border-color: #DB8876;
+    background-color: var(--light-red);
+    border-color: var(--light-red);
     border-style: dashed;
+    left: 73%;
+    position: fixed;
+    top: 7%
 }
 
 form div {
+    align-items: self-start;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    align-items: self-start;
     margin-bottom: 26px;
+    width: 100%
 }
 
 form input {
-    width: 100%;
-    height: 68px;
     border: none;
     border-radius: 5px;
+    height: 68px;
+    width: 100%
 }
 
-/* 6- Style apporté à la modale du carroussel. */
 .modal_childrens {
-    width: 50%;
     height: 75%;
+    margin: auto;
     position: relative;
     top: 10%;
-    margin: auto;
-
+    width: 50%
 }
 
 #medias_modal {
+    background-color: var(--background-color-modal);
     display: none;
+    height: 100%;
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(187, 187, 187, 0.47);
-
+    width: 100%
 }
 
 .modal-content,
 #carousel {
-    width: 100%;
     height: 100%;
-    margin: 0px 20px;
+    margin: 0 20px;
+    width: 100%
 }
 
 #carousel img,
 #carousel video {
-    width: 100%;
+    height: 100%;
     object-fit: cover;
-    height: 100%;
+    width: 100%
 }
 
-/* 7- Style apporté à la modale du carroussel et aux boutons previous, next et close. */
 .mediaModal {
-    height: 100%;
     display: none;
-}
-
-.mediaModal.active {
-    display: block;
+    height: 100%
 }
 
 .mediaModal p {
-    margin: 0;
     color: #901C1C;
+    margin: 0
 }
 
 .modal-content {
+    background-color: var(--white-color);
     display: flex;
-    background-color: white;
-    padding: 25px 40px 40px 40px;
+    padding: 25px 40px 40px
 }
 
 .previous-button {
-    background: url('/assets/icons/prev.png') center no-repeat;
-    width: 50px;
+    background: url(/assets/icons/prev.png) center no-repeat;
+    background-size: 20px;
+    cursor: pointer;
     height: 50px;
     object-fit: cover;
-    cursor: pointer;
-    background-size: 20px;
-
+    width: 50px
 }
 
 #left-side {
-    display: flex;
-    height: 50%;
-    flex-direction: column-reverse;
     align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 50%
 }
 
 #right-side {
+    align-items: center;
     display: flex;
     flex-direction: column;
     height: 50%;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between
 }
 
 .close-button {
-    background: url('/assets/icons/closemodal.png') center no-repeat;
-    width: 50px;
+    background: url(/assets/icons/closemodal.png) center no-repeat;
+    background-size: 20px;
+    cursor: pointer;
     height: 50px;
     object-fit: cover;
-    cursor: pointer;
-    background-size: 20px;
-
+    width: 50px
 }
 
 .next-button {
-    background: url('/assets/icons/next.png') center no-repeat;
-    width: 50px;
+    background: url(/assets/icons/next.png) center no-repeat;
+    background-size: 20px;
+    cursor: pointer;
     height: 50px;
     object-fit: cover;
-    cursor: pointer;
-    background-size: 20px;
-
+    width: 50px
 }
 
 .next-button img {
-    width: 30px;
     height: 30px;
+    width: 30px
 }
 
-/*-----------------------------------------------------------*/
+#contact_modal,
+#menu {
+    display: none
+}
+
+#filter:focus+#menu,
+.mediaModal.active {
+    display: block
+}
