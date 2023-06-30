@@ -128,12 +128,12 @@ function photographerFactory(data) { // data = tableau de données
         form.addEventListener('submit', (event) => { // Ajout d'un écouteur d'événement au clic sur le bouton submit.
             event.preventDefault(); // Empêche le comportement par défaut du bouton submit.
             let contactForm = { // Création d'un objet contactForm.
-                firstname: form.firstname.value, // Ajout d'une propriété firstname à l'objet contactForm.
-                lastname: form.lastname.value, // Ajout d'une propriété lastname à l'objet contactForm.
-                email: form.email.value, // Ajout d'une propriété email à l'objet contactForm.
-                message: form.message.value, // Ajout d'une propriété message à l'objet contactForm.
+                firstname: form.firstname.value,
+                lastname: form.lastname.value,
+                email: form.email.value,
+                message: form.message.value,
             }
-            console.log(contactForm); // Affiche dans la console l'objet contactForm.
+            console.log(contactForm);
             form.reset(); // Réinitialise le formulaire.
             alert('Le formulaire a été soumis avec succès !'); // Affiche une alerte.
         });

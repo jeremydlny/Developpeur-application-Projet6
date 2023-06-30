@@ -1,5 +1,20 @@
+class PhotographerMediaFactory {
+    static create(data) {
+        const { mediaType } = data;
+        switch (mediaType) {
+            case 'image':
+                return new ImageMedia(data);
+            case 'video':
+                return new VideoMedia(data);
+            default:
+                throw new Error('Invalid media type');
+        }
+    }
+}
+
 class PhotographerMedia {
 
+    // Constructeur de la classe PhotographerMedia
     constructor(data) {
         const { date, id, likes, photographerId, price, title } = data;
         this.title = title;
@@ -22,6 +37,7 @@ class PhotographerMedia {
             </div>  
         `)
 
+        // Ajout d'un évènement au clique d'un coeur permettant de liker un média.
         const like = card.querySelector(".heart")
         like.addEventListener('click', () => this.toggleLike()) // Ajout d'un évènement au clique d'un coeur permettant de liker un média.
 
@@ -156,5 +172,3 @@ class VideoMedia extends PhotographerMedia {
     }
 
 }
-
-

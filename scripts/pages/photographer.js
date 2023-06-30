@@ -110,7 +110,7 @@ function displaydata(photographer, photographerMedia) {
                     if (a.likes > b.likes) { // Si le nombre de likes de l'index a est supérieur au nombre de likes de l'index b, on retourne 1.
                         return -1 // Si le nombre de likes de l'index a est inférieur au nombre de likes de l'index b, on retourne -1.
                     } else { // Sinon, on retourne 1.
-                        return 1 // Sinon, on retourne -1.
+                        return 1
                     }
                     break; // On sort du switch.
                 case 'Date':  // Si l'élément cliqué est Date, on trie le tableau photographerMedia en fonction de la date.

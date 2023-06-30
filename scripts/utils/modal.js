@@ -1,8 +1,8 @@
 function initmodal(medias) {
 
+    // Récupération de la modale.
     const modal = document.getElementById("medias_modal");
     modal.style.display = "none";
-
 
     // Création du HTML de la modale.
     const modalHtml = `
